@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 13
+font pango:System San Francisco Display 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -110,11 +110,11 @@ bindsym $mod+a focus parent
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoidd repeating the names in multiple places.
 set $ws1 "1: Terminal"
-set $ws2 "2: Firefox "
+set $ws2 "2: Firefox"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
-set $ws6 "6: susssssy"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
@@ -146,6 +146,7 @@ bindsym $mod+Shift+odiaeresis move container to workspace number $ws10
 
 assign [class="firefox"] $ws2  
 exec firefox
+exec xcompmgr -c
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -180,6 +181,9 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+bindsym $mod+Print exec scrot /home/tmpkkecske/Images/`date +%Y-%m-%d_%H:%M:%S`.jpg
+bindsym Print exec scrot -e 'xclip -selection clipboard -t image/png -i $f'
+
 
 exec_always feh --bg-scale /home/tmpkkecske/wallpaper.jpg
 bindsym $mod+shift+x exec i3lock
@@ -190,19 +194,17 @@ bindsym $mod+shift+x exec i3lock
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 
-exec sh /home/tmpkkecske/.screenlayout/fof.sh
-
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set $bg-color 	         #00c95e
+set $inactive-bg-color   #004f1e
+set $text-color          #000000
+set $inactive-text-color #ffffff
+set $urgent-bg-color     #ff2100
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+client.focused          $bg-color           $bg-color          $text-color          #00ff00 
+client.unfocused        $inactive-color     $inactive-bg-color $inactive-text-color #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
 client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 client.background #000000
 
@@ -211,9 +213,9 @@ bar {
   	#status_command i3blocks -c /home/booker/.i3/i3blocks.conf
 	colors {
 		background $bg-color
-	    	separator #757575
+	    	separator #000000
 		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
+		focused_workspace  #000000          $bg-color          $text-color
 		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
 		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
 	}
