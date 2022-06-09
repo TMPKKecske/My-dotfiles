@@ -9,6 +9,16 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+
+#Needed for i3-gaps
+#hide_edge_borders both
+for_window [class="^.*"] border pixel 2 
+gaps inner 15 
+gaps outer 15
+
+bindsym $mod+z		gaps outer current plus 5
+bindsym $mod+Shift+z	gaps outer current minus 5
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
