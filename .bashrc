@@ -8,4 +8,8 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 [ -n "$XTERM_VERSION" ] && transset-df --id "$WINDOWID" >/dev/null
+tcb() {
+    xclip -sel clip <<<"$@"
+}
+
 

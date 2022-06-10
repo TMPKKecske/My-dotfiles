@@ -1,2 +1,6 @@
 xterm*background:   black
 xterm*foreground:   green
+XTerm*SaveLines: 2000
+XTerm*faceSize: 12
+XTerm*rightScrollBar: true
+XTerm*ScrollBar: true
