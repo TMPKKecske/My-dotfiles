@@ -11,4 +11,5 @@ You'll also have to make an folder named "Images" in your home folder for screen
 The `Mod+Printscreen` saves files to the `~/Images` folder. (`Printscreen` itself just copies screenshots to the clipboard)
 ### Aliases
 **i3edit** - edits the ~/.config/i3/config file with vim.\n
+
 **weather** - gives a weather forcast from the terminal
