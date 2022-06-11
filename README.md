@@ -6,3 +6,9 @@ If you want you can copy it or pick out what you like, or anything really. Have 
 You have to install `feh, xclip, scrot, i3blocks` and `xcompmgr` from pacman repos and `transset-df` from the AUR.
 You'll also have to make an folder named "Images" in your home folder for screenshots to save wich are made with mod+Printscreen.
 (Printscreen saves images to your clipboard)
+## Usage:
+### Printscreen
+The `Mod+Printscreen` saves files to the `~/Images` folder. (`Printscreen` itself just copies screenshots to the clipboard)
+### Aliases
+i3edit - edits the ~/.config/i3/config file with vim.
+weather - gives a weather forcast from the terminal
