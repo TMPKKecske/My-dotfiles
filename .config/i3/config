@@ -54,7 +54,7 @@ bindsym F3 exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec  xterm -fa 'hack' -fs 8
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -213,21 +213,22 @@ set $urgent-bg-color     #ff2100
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00 
-client.unfocused        $inactive-color     $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+client.focused          $bg-color           $bg-color          $text-color          $bg-color 
+client.unfocused        $inactive-color     $inactive-bg-color $inactive-text-color $inactive-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-text-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color 
 client.background #000000
 
 # bar
 bar {
   	status_command i3blocks -c /home/tmpkkecske/.config/i3/i3blocks.conf
 	colors {
-		background $bg-color
+		background #004f1e 
+# 00190e 
 	    	separator #000000
 		#                  border             background         text
-		focused_workspace  #000000          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+		focused_workspace  #000000            $bg-color          $text-color
+		inactive_workspace #000000            $inactive-bg-color $inactive-text-color
+		urgent_workspace   #000000            $urgent-bg-color   $text-color
 	}
 }
