@@ -10,6 +10,7 @@ You'll also have to make an folder named "Images" in your home folder for screen
 ### Printscreen
 The `Mod+Printscreen` shortcut saves files to the `~/Images` folder. (`Printscreen` itself just copies screenshots to the clipboard)
 
+### Volume and microphone controls
 Pressing `F3` mutes your microphone.
 
 Pressing `F2` turns your volume down.
