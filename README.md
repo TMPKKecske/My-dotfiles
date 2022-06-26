@@ -10,7 +10,9 @@ You'll also have to make an folder named "Images" in your home folder for screen
 ### Printscreen
 The `Mod+Printscreen` shortcut saves files to the `~/Images` folder. (`Printscreen` itself just copies screenshots to the clipboard)
 Pressing `F3` mutes your microphone.
+
 Pressing `F2` turns your volume down.
+
 Pressing `F1` turns your volume up.
 ### Aliases
 **i3edit** - edits the ~/.config/i3/config file with vim.
